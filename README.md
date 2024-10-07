@@ -1,131 +1,69 @@
-# Cara Mengupdate GitHub dan Repository Lokal
+# aveStudy
 
-Dokumentasi ini menjelaskan langkah-langkah untuk memperbarui repository lokal dari GitHub dan sebaliknya, memperbarui GitHub dengan perubahan dari repository lokal.
+**aveStudy** is a collection of solutions to problems from [Project Euler](https://projecteuler.net/) using Jupyter notebooks (`.ipynb`). In addition, this repository includes educational materials related to mathematics and computer science.
 
-## Daftar Isi
+## Contents
 
-- [Menambahkan Remote Repository](#menambahkan-remote-repository)
-- [Menghapus Remote Repository](#menghapus-remote-repository)
-- [Mengupdate Repository Lokal dari GitHub](#mengupdate-repository-lokal-dari-github)
-- [Mengupdate GitHub dari Repository Lokal](#mengupdate-github-dari-repository-lokal)
-- [Menangani Konflik](#menangani-konflik)
+- **Project Euler Solutions**: Well-documented solutions to various problems from Project Euler, showcasing mathematical and programming techniques.
+- **Educational Materials**: Learning resources and notes on mathematical concepts, algorithms, and problem-solving strategies.
 
----
+## Structure
 
-## Menambahkan Remote Repository
+The repository is organized into two main sections:
 
-Untuk menambahkan remote repository ke proyek lokal:
+1. **Project Euler Solutions**:
+   - Each problem is solved using Python and is available in a Jupyter notebook format for easy visualization and interaction.
+   - The solutions demonstrate both mathematical derivations and coding practices.
 
-1. **Buka terminal** di dalam direktori proyek lokal.
-2. **Tambahkan remote repository**:
+2. **Learning Materials**:
+   - Contains notes and tutorials on relevant topics such as algorithms, data structures, and theoretical mathematics.
+   - Supplementary resources for understanding the concepts used in solving Project Euler problems.
+
+## Getting Started
+
+### Prerequisites
+
+To explore the solutions and materials, you need the following tools installed on your system:
+
+- [Python 3.x](https://www.python.org/downloads/)
+- [Jupyter Notebook](https://jupyter.org/install)
+- Recommended: [NumPy](https://numpy.org/), [SymPy](https://www.sympy.org/), and [Matplotlib](https://matplotlib.org/) for enhanced computation and visualization.
+
+### Installation
+
+1. Clone the repository:
    ```bash
-   git remote add <nama-remote> <url-repository>
+   git clone https://github.com/avezoor/aveStudy.git
    ```
-   Contoh:
+2. Navigate to the project directory:
    ```bash
-   git remote add origin https://github.com/username/repository.git
+   cd aveStudy
    ```
-
----
-
-## Menghapus Remote Repository
-
-Untuk menghapus remote repository yang sudah ada:
-
-1. **Buka terminal** di dalam direktori proyek lokal.
-2. **Hapus remote repository**:
+3. Open Jupyter Notebook:
    ```bash
-   git remote remove <nama-remote>
+   jupyter notebook
    ```
-   Contoh:
-   ```bash
-   git remote remove origin
-   ```
+4. From the Jupyter interface, open any `.ipynb` file to explore solutions and study materials.
 
----
+## Usage
 
-## Mengupdate Repository Lokal dari GitHub
+- **Project Euler Solutions**: Open any problem notebook, execute the cells to see the step-by-step solutions, and interact with the code to enhance your understanding.
+- **Learning Materials**: Study the notes provided to improve your knowledge of mathematical and computational concepts.
 
-Untuk menarik perubahan terbaru dari GitHub ke repository lokal:
+## Contributions
 
-1. **Buka terminal** di dalam direktori proyek lokal.
-2. **Pastikan kamu berada di branch yang ingin di-update**:
-   ```bash
-   git checkout <nama-branch>
-   ```
-   Ganti `<nama-branch>` dengan nama branch yang ingin di-update (misalnya, `main`).
-3. **Tarik perubahan terbaru dari GitHub**:
-   ```bash
-   git pull origin <nama-branch>
-   ```
-   Contoh jika kamu berada di branch `main`:
-   ```bash
-   git pull origin main
-   ```
+Contributions are welcome! If you'd like to improve solutions, add new problems, or contribute educational content, please follow these steps:
 
-Ini akan mengunduh dan menggabungkan perubahan terbaru dari GitHub ke repository lokal.
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature-name`).
+3. Make your changes and additions.
+4. Push your branch (`git push origin feature/your-feature-name`).
+5. Create a pull request.
 
----
+## License
 
-## Mengupdate GitHub dari Repository Lokal
+This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-Untuk mengirim perubahan dari repository lokal ke GitHub:
+## Contact
 
-1. **Periksa status repository** untuk melihat perubahan yang belum di-commit:
-   ```bash
-   git status
-   ```
-2. **Tambahkan file yang ingin di-commit**:
-   - Untuk menambahkan file tertentu:
-     ```bash
-     git add <nama-file>
-     ```
-   - Untuk menambahkan semua file yang berubah:
-     ```bash
-     git add .
-     ```
-3. **Lakukan commit terhadap perubahan**:
-   ```bash
-   git commit -m "Deskripsi singkat tentang perubahan"
-   ```
-4. **Dorong (push) perubahan ke GitHub**:
-   ```bash
-   git push origin <nama-branch>
-   ```
-   Contoh jika kamu bekerja di branch `main`:
-   ```bash
-   git push origin main
-   ```
-
----
-
-## Menangani Konflik
-
-Jika ada konflik saat melakukan `git pull` atau `git push`, langkah-langkah berikut bisa membantu:
-
-1. **Lakukan pull** untuk menarik perubahan terbaru sebelum melakukan push:
-   ```bash
-   git pull origin <nama-branch>
-   ```
-2. **Selesaikan konflik** secara manual. Git akan menunjukkan file mana saja yang memiliki konflik.
-3. **Edit file yang mengalami konflik**, lalu tandai perubahan yang telah diselesaikan:
-   ```bash
-   git add <nama-file>
-   ```
-4. **Lakukan commit untuk menyimpan perubahan setelah konflik diselesaikan**:
-   ```bash
-   git commit
-   ```
-5. **Dorong kembali perubahan ke GitHub**:
-   ```bash
-   git push origin <nama-branch>
-   ```
-
----
-
-## Catatan
-
-- Pastikan kamu selalu bekerja di branch yang sesuai (`main`, `development`, atau branch lain yang relevan).
-- Sebelum melakukan `git push`, lakukan `git pull` terlebih dahulu untuk memastikan kamu memiliki perubahan terbaru dari GitHub.
-- Dalam kasus konflik, baca pesan yang diberikan oleh Git untuk membantu menyelesaikan masalah secara manual.
-```
+For any questions or feedback, feel free to open an issue or contact me at **[your email]**.
